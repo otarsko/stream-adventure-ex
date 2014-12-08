@@ -1,30 +1,14 @@
 /**
- * Created by alex on 07.12.14.
+ * Created by alex on 04.12.14.
  */
 
+var spawn = require('child_process').spawn;
 var duplexer = require('duplexer');
-var through = require('through');
 
-module.exports = function(counter) {
+module.exports = function(cmd, args){
+    var child = spawn(cmd, args);
 
-    var countries = {
-
-    };
-
-    var write = function(obj) {
-
-        if (countries[obj.country]) {
-            countries[obj.country] += 1;
-        } else {
-            countries[obj.country] = 1;
-        }
-    };
-
-    var end = function() {
-        counter.setCounts(countries);
-    };
-
-    var writableStream = through(write, end);
-
-    return duplexer(writableStream, counter);
+    var duplexStream = duplexer(child.stdin, child.stdout);
+    return duplexStream;
 };
+

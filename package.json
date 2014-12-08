@@ -1,0 +1,28 @@
+{
+  "name": "stream-adventure-ex",
+  "version": "0.0.0",
+  "description": "stream-adventure-ex ===================",
+  "main": "index.js",
+  "dependencies": {
+    "concat-stream": "~1.4.7",
+    "crypto": "~0.0.3",
+    "duplexer": "~0.1.1",
+    "split": "~0.3.2",
+    "stream-combiner": "~0.2.1",
+    "through": "~2.3.6",
+    "trumpet": "~1.7.0",
+    "websocket-stream": "~1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AAlukard/stream-adventure-ex.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "gitHead": "71f22d56ce244c3dd7eb84e5246469f96323d091",
+  "readmeFilename": "README.md"
+}
